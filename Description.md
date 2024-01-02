@@ -18,6 +18,27 @@ In this step, the centroids are recomputed and updated. This is done by taking t
 
 The K-Means algorithm depends upon finding the number of clusters and data labels for a pre-defined value of K. To find the number of clusters in the data, we need to run the K-Means clustering algorithm for different values of K and compare the results. So, the performance of K-Means algorithm depends upon the value of K. We should choose the optimal value of K that gives us best performance. There are different techniques available to find the optimal value of K. The most common technique is the elbow method which is described below.
 ### 5. The elbow method 
+- Select a range of values for k: Start by choosing a range of values for the number of clusters (k). The range is often determined based on the characteristics of the data or prior knowledge of the problem.
+
+- Run the clustering algorithm for each k: Apply the clustering algorithm (e.g., k-means) to the dataset for each value of k in the chosen range. Calculate the clustering metric for each run. Common metrics include the sum of squared distances within clusters (inertia) or the average silhouette score.
+
+- Calculate the clustering metric for each k: For each value of k, calculate the clustering metric that provides a measure of how well the data is clustered. The metric should be minimized, indicating tight and well-separated clusters.
+
+- Plot the results: Create a line graph or a curve where the x-axis represents the number of clusters (k), and the y-axis represents the corresponding clustering metric.
+
+- Identify the elbow point: Examine the graph to identify the "elbow" point. The elbow is the point where the rate of decrease in the clustering metric sharply changes, forming an angle resembling an elbow. This point indicates the optimal number of clusters, as increasing k beyond this point results in diminishing returns in terms of improved clustering.
+## Results and conclusion 
 
 
-The elbow method is used to determine the optimal number of clusters in K-means clustering. The elbow method plots the value of the cost function produced by different values of K. The below diagram shows how the elbow method works:-
+In this project, I have implemented the most popular unsupervised clustering technique called K-Means Clustering.
+
+1.I have applied the elbow method and find that k=2 (k is number of clusters) can be considered a good number of cluster to cluster this data.
+
+2.I have find that the model has very high inertia of 237.7572. So, this is not a good model fit to the data.
+
+3.I have achieved a weak classification accuracy of 1% with k=2 by our unsupervised model.
+
+4.So, I have changed the value of k and find relatively higher classification accuracy of 62% with k=4.
+
+Hence, we can conclude that k=4 being the optimal number of clusters.
+
